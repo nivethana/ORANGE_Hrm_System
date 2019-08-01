@@ -1,4 +1,4 @@
-package com.test.qa.test.PIMTests;
+package com.test.qa.test;
 
 
 import com.test.qa.pageobjects.pages.HomePage;
@@ -55,6 +55,7 @@ public class ConfigurationTest extends TestBase {
 
         CustomFields.SetType(Constants.TYPE_SELECTION_2);
         softAssert.assertTrue(CustomFields.GetType().contains(Constants.TYPE_SELECTION_2));
+
 
         CustomFields.ClickSaveButton();
 
