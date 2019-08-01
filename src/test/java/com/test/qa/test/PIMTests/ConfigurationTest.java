@@ -38,7 +38,25 @@ public class ConfigurationTest extends TestBase {
         HomePage.clickLink(Constants.PMI_SUB_LINK);
         PIMPage.ConfigSubClick();
         HomePage.clickLink(Constants.CUSTOM_FIELDS_LINK);
-        softAssert.assertEquals(CustomFields.GetData(),Constants.CUSTOM_HEADING, "invalid text");
+        // softAssert.assertEquals(CustomFields.GetData(),Constants.CUSTOM_HEADING, "invalid text");
+        softAssert.assertEquals(CustomFields.GetData(),Constants.ADD_CUSTOM_HEADING, "invalid text");
+        softAssert.assertTrue(CustomFields.IsEmptyFieldName(),"Field is Empty");
+        CustomFields.ClickFieldNameInBox();
+        CustomFields.CleanFieldName();
+        CustomFields.SetFieldName(Constants.FIELDNAME);
+        softAssert.assertTrue(CustomFields.IsScreenDisplay(),"Selection option invisible");
+        CustomFields.SetSelectScreen(Constants.SELECTION);
+        softAssert.assertTrue(CustomFields.GetSelectionScreen().contains(Constants.SELECTION));
+        softAssert.assertTrue(CustomFields.IsTypeDisplay(),"Type is invisible");
+
+        CustomFields.SetType(Constants.TYPE_SELECTION_1);
+        softAssert.assertTrue(CustomFields.GetType().contains(Constants.TYPE_SELECTION_1));
+        //CustomFields.ClickSaveButton();
+
+        CustomFields.SetType(Constants.TYPE_SELECTION_2);
+        softAssert.assertTrue(CustomFields.GetType().contains(Constants.TYPE_SELECTION_2));
+
+        CustomFields.ClickSaveButton();
 
         softAssert.assertAll();
     }

@@ -58,6 +58,11 @@ public class Constants {
 	public static final String CONFIG_OPTION_LINK="/index.php/pim/configurePim";
 	public static final String SAVE_SUCCESS_MESSAGE ="Successfully Saved";
 	public static final String CUSTOM_FIELDS_LINK="/index.php/pim/listCustomFields";
-	public static final String CUSTOM_HEADING="Defined Custom Fields";
+	//public static final String CUSTOM_HEADING="Defined Custom Fields";
+	public static final String ADD_CUSTOM_HEADING="Add Custom Field";
+	public static final String FIELDNAME="Abirame";
+	public static final String SELECTION="Personal Details";
+	public static final String TYPE_SELECTION_1="0";
+	public static final String TYPE_SELECTION_2="1";
 
 }	
